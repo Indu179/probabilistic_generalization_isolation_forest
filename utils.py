@@ -32,7 +32,7 @@ def load_data(sourcePath, dataset):
     
     dataset = "_".join(dataset.split(".")[:-1])
     X = data[:,:-1]
-    X = X.astype(np.float)
+    X = X.astype(float)
     mins = X.min(axis = 0)
     maxes = X.max(axis = 0)
     X = (X - mins)/(maxes-mins + np.spacing(maxes-mins))
